@@ -1,4 +1,4 @@
-*Linear Search
+*Linear Search---
 
 import java.util.Scanner;
 public class Main {
@@ -25,5 +25,44 @@ public class Main {
         }
         int key=sc.nextInt();
         System.out.println(linearSearch(arr,n,key));
+    }
+}
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+* Binary Search---
+// for Binary search array must be sorted.
+// Time complexity in binary search is O(log n base 2).
+
+import java.util.Scanner;
+public class Main {
+    static int BinarySearch(int arr[], int n, int key){
+        int l=0; //l for lowest element or starting point.
+        int h=n; //h for highest element of ending point.
+        int mid=0;
+        while(l<=h){
+            mid=(l+h)/2;
+            if(arr[mid]==key){
+                return mid;
+            }
+            else if(arr[mid]>key){ // ie element must be present in first half or array.
+                h=mid-1;
+            }
+            else{                  // ie element must be present in second half of array.
+                l=mid+1;
+            }
+        }
+        return -1;
+    }
+    public static void main(String args[]) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        int key=sc.nextInt();
+        System.out.println(BinarySearch(arr,n,key));
     }
 }
