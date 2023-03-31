@@ -105,6 +105,7 @@ public class Main {
 // * Bubble Sort->Reapetedly swap two adjacent element if they are in wrong order.
 // Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in the wrong order.
 //  This algorithm is not suitable for large data sets as its average and worst-case time complexity is quite high.
+// Time complexcity of bubble sort will be O(n^2).
 
 import java.util.Scanner;
 public class Main {
